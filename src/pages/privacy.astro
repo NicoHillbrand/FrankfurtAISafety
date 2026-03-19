@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteConfig } from "../config";
+---
+
+<Layout>
+  <section class="pt-28 pb-20 sm:pt-36 sm:pb-28">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+      <h1 class="text-3xl font-bold text-text-primary mb-10">Privacy Policy</h1>
+
+      <div class="space-y-8 text-text-secondary leading-relaxed">
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Responsible Party</h2>
+          <p>
+            {siteConfig.name}<br />
+            c/o AI Safety Aachen e.V.<br />
+            Hünefeldstraße 35<br />
+            52068 Aachen<br />
+            Deutschland
+          </p>
+          <p class="mt-2">
+            E-Mail: <a href={`mailto:${siteConfig.links.email}`} class="text-brand-light hover:underline">{siteConfig.links.email}</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Overview</h2>
+          <p>
+            This website is a static site and does not use cookies, tracking scripts, or analytics tools. We collect as little personal data as possible.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Hosting</h2>
+          <p>
+            This website is hosted on GitHub Pages / Netlify (adjust as applicable). When you visit this site, the hosting provider may collect and store server log files, which may include:
+          </p>
+          <ul class="list-disc list-inside mt-3 space-y-1 text-text-muted">
+            <li>Your IP address</li>
+            <li>Browser type and version</li>
+            <li>Operating system</li>
+            <li>Referring URL</li>
+            <li>Date and time of access</li>
+          </ul>
+          <p class="mt-3">
+            This data is processed on the basis of Art. 6 (1) (f) GDPR (legitimate interest in the secure and efficient operation of the website). The data is not combined with other data sources.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Google Fonts</h2>
+          <p>
+            This website uses the font "Inter" from Google Fonts. When you load a page, your browser downloads the required font files from Google's servers. In doing so, Google receives your IP address and browser information.
+          </p>
+          <p class="mt-2">
+            Google's privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-brand-light hover:underline">policies.google.com/privacy</a>
+          </p>
+          <p class="mt-2 text-text-muted text-sm">
+            Note: To avoid this, you can self-host the font files. See the template README for instructions.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">External Links</h2>
+          <p>
+            This website contains links to external sites. We have no control over the content or privacy practices of those sites. Please review their privacy policies independently.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Your Rights</h2>
+          <p>
+            Under GDPR, you have the right to:
+          </p>
+          <ul class="list-disc list-inside mt-3 space-y-1 text-text-muted">
+            <li>Request access to your personal data (Art. 15 GDPR)</li>
+            <li>Request correction of inaccurate data (Art. 16 GDPR)</li>
+            <li>Request deletion of your data (Art. 17 GDPR)</li>
+            <li>Request restriction of processing (Art. 18 GDPR)</li>
+            <li>Object to processing (Art. 21 GDPR)</li>
+            <li>Data portability (Art. 20 GDPR)</li>
+            <li>Lodge a complaint with a supervisory authority</li>
+          </ul>
+          <p class="mt-3">
+            To exercise these rights, contact us at <a href={`mailto:${siteConfig.links.email}`} class="text-brand-light hover:underline">{siteConfig.links.email}</a>.
+          </p>
+        </div>
+
+        <p class="text-sm text-text-muted pt-4">
+          Last updated: March 2026
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

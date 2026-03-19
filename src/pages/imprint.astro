@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteConfig } from "../config";
+---
+
+<Layout>
+  <section class="pt-28 pb-20 sm:pt-36 sm:pb-28">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+      <h1 class="text-3xl font-bold text-text-primary mb-10">Imprint</h1>
+
+      <div class="space-y-8 text-text-secondary leading-relaxed">
+        <div>
+          <p class="text-sm text-text-muted mb-4">Information in accordance with § 5 DDG</p>
+          <p>
+            {siteConfig.name}<br />
+            c/o AI Safety Aachen e.V.<br />
+            Hünefeldstraße 35<br />
+            52068 Aachen<br />
+            Deutschland
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Represented by</h2>
+          <p>
+            Nico Hillbrand, 1. Vorsitzender<br />
+            Felix Krückel, 2. Vorsitzender
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Contact Information</h2>
+          <p>
+            E-Mail: <a href={`mailto:${siteConfig.links.email}`} class="text-brand-light hover:underline">{siteConfig.links.email}</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Registration</h2>
+          <p>
+            Registered in the Vereinsregister<br />
+            Registergericht: Amtsgericht Aachen<br />
+            Registernummer: VR 6530
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Liability for Content</h2>
+          <p>
+            The contents of our pages were created with the greatest care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. As a service provider, we are responsible for our own content on these pages under general law according to § 7 (1) DDG. According to §§ 8 to 10 DDG, however, we are not obligated as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-semibold text-text-primary mb-3">Liability for Links</h2>
+          <p>
+            Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot accept any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages.
+          </p>
+        </div>
+
+        <p class="text-sm text-text-muted pt-4">
+          Last updated: March 2026
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

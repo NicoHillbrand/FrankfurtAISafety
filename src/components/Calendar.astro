@@ -1,0 +1,35 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="calendar" class="py-16 sm:py-20">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <h2 class="text-2xl sm:text-3xl font-bold text-text-primary mb-8 text-center">
+      Calendar
+    </h2>
+
+    {siteConfig.links.calendarUrl ? (
+      <div class="rounded-xl overflow-hidden border border-border bg-bg-card calendar-embed" style="max-height: 460px;">
+        <iframe
+          src={`${siteConfig.links.calendarUrl}&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0`}
+          style="border:0; margin-bottom: -40px;"
+          width="100%"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          class="w-full"
+        ></iframe>
+      </div>
+    ) : (
+      <div class="rounded-xl border border-border-light border-dashed p-12 text-center bg-bg-card">
+        <svg class="w-12 h-12 text-text-muted mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <p class="text-text-secondary mb-2">Events coming soon.</p>
+        <p class="text-text-muted text-sm">
+          Join our WhatsApp group to stay updated on meetup times!
+        </p>
+      </div>
+    )}
+  </div>
+</section>
