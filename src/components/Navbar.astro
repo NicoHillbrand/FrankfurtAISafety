@@ -5,39 +5,37 @@ import { siteConfig } from "../config";
 <nav class="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-border">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex items-center justify-between h-14">
-      <a href="/" class="font-semibold text-text-primary">
-        {siteConfig.shortName}
+      <a href="/" class="flex items-center gap-2.5 font-semibold text-text-primary">
+        <img src="/logo-circle-bg.png" alt="FAS Logo" class="h-9 w-9 rounded-full" />
+        <span class="hidden sm:inline text-base">{siteConfig.shortName}</span>
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden sm:flex items-center gap-6">
         <a href="#about" class="text-sm text-text-secondary hover:text-text-primary transition-colors">About</a>
-        <a href="#calendar" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Calendar</a>
+        <a href="#socials" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Events</a>
+        <a href="#projects" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Projects</a>
         <a href="#resources" class="text-sm text-text-secondary hover:text-text-primary transition-colors">Resources</a>
-        {siteConfig.links.whatsapp && (
-          <a
-            href={siteConfig.links.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand-dark transition-colors"
-          >
-            Join us!
-          </a>
-        )}
+        <a
+          href={siteConfig.links.signupForm}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand text-bg text-sm font-medium hover:bg-brand-dark transition-colors"
+        >
+          Join us!
+        </a>
       </div>
 
       <!-- Mobile Menu Button -->
       <div class="flex sm:hidden items-center gap-3">
-        {siteConfig.links.whatsapp && (
-          <a
-            href={siteConfig.links.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center px-3 py-1.5 rounded-full bg-brand text-white text-xs font-medium hover:bg-brand-dark transition-colors"
-          >
-            Join us!
-          </a>
-        )}
+        <a
+          href={siteConfig.links.signupForm}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-3 py-1.5 rounded-full bg-brand text-bg text-xs font-medium hover:bg-brand-dark transition-colors"
+        >
+          Join us!
+        </a>
         <button id="mobile-menu-btn" class="p-1.5 text-text-secondary hover:text-text-primary" aria-label="Menu">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -51,7 +49,8 @@ import { siteConfig } from "../config";
   <div id="mobile-menu" class="hidden sm:hidden bg-bg border-t border-border">
     <div class="px-4 py-3 space-y-2">
       <a href="#about" class="block text-sm text-text-secondary hover:text-text-primary py-1">About</a>
-      <a href="#calendar" class="block text-sm text-text-secondary hover:text-text-primary py-1">Calendar</a>
+      <a href="#socials" class="block text-sm text-text-secondary hover:text-text-primary py-1">Events</a>
+      <a href="#projects" class="block text-sm text-text-secondary hover:text-text-primary py-1">Projects</a>
       <a href="#resources" class="block text-sm text-text-secondary hover:text-text-primary py-1">Resources</a>
     </div>
   </div>

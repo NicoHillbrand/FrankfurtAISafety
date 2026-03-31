@@ -21,8 +21,12 @@ export const siteConfig = {
   links: {
     whatsapp: "https://chat.whatsapp.com/GhJC4HfZwkiIAvA85U6w7V",
     telegram: "",
-    email: "info@frankfurtaisafety.org",
+    email: "frankfurtsafety@gmail.com",
     instagram: "",
+    linkedin: "https://www.linkedin.com/company/safe-ai-frankfurt/",
+    meetup: "https://www.meetup.com/safe-ai-germany-saige-frankfurt/",
+    signupForm: "https://docs.google.com/forms/d/e/1FAIpQLSehSHSObfVL7BiVUDc5vJPUw9B6rg6M83APPEU3CHFKDrgXwA/viewform",
+    mentorForm: "https://docs.google.com/forms/d/e/1FAIpQLSdRA8cLh4T-uPLZgmj4molRXpmxSRch1hjt39TpgLSd4GUFow/viewform",
     calendarUrl: "https://calendar.google.com/calendar/embed?src=d730ada09a8e1b31dd37d6fff91669151abb3e9fd0d247732162b95ed665d722%40group.calendar.google.com&ctz=Europe%2FBerlin",
   },
 

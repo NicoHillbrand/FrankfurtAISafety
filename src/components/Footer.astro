@@ -16,6 +16,11 @@ import { siteConfig } from "../config";
             {siteConfig.links.email}
           </a>
         )}
+        {siteConfig.links.linkedin && (
+          <a href={siteConfig.links.linkedin} target="_blank" rel="noopener noreferrer" class="hover:text-text-secondary transition-colors">
+            LinkedIn
+          </a>
+        )}
         {siteConfig.saige.affiliated && (
           <a href={siteConfig.saige.url} target="_blank" rel="noopener noreferrer" class="hover:text-text-secondary transition-colors">
             SAIGE

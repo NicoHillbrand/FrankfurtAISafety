@@ -1,0 +1,64 @@
+---
+const projects = [
+  {
+    title: "AI Safety Explainer Series",
+    tags: ["Beginner-friendly", "Media skills needed"],
+    description: "Produce a set of short, plain-language explainers on YouTube and Substack on key AI safety concepts aimed at the general online audience within and outside of Europe.",
+    output: ["3 bite-sized YouTube Videos", "5 Substack posts"],
+    color: "bg-amber-900/30 border-amber-700/40",
+    tagColor: "bg-amber-800/50 text-amber-200",
+  },
+  {
+    title: "AI Safety Replication Report",
+    tags: ["Technical", "Programming req."],
+    description: "Reproduce important AI safety papers to validate results based on the EU AI Act guidelines and build understanding in areas such as interpretability, evaluation methods, alignment techniques.",
+    output: ["AI Safety Replication Paper"],
+    color: "bg-emerald-900/30 border-emerald-700/40",
+    tagColor: "bg-emerald-800/50 text-emerald-200",
+  },
+  {
+    title: "LLM Red: State of LLM Safety 2026",
+    tags: ["Technical", "Programming req."],
+    description: "Stress test existing AI models for safety failures. Focus areas include: Jail breaks, Prompt injection, Deception, Autonomous Agent failures.",
+    output: ["State of LLM 2026 – European Evaluation Report"],
+    color: "bg-red-900/30 border-red-700/40",
+    tagColor: "bg-red-800/50 text-red-200",
+  },
+];
+---
+
+<section id="projects" class="py-16 sm:py-20 fade-in-section">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-text-primary mb-3">2026 Community Projects</h2>
+      <p class="text-text-secondary max-w-2xl mx-auto">
+        Join one of our hands-on projects running from April to December 2026. Which project would you like to work on?
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {projects.map((project) => (
+        <div class={`rounded-xl border p-6 flex flex-col ${project.color}`}>
+          <h3 class="text-lg font-bold text-text-primary mb-3">{project.title}</h3>
+          <div class="flex flex-wrap gap-2 mb-4">
+            {project.tags.map((tag) => (
+              <span class={`text-xs px-2 py-1 rounded-full ${project.tagColor}`}>{tag}</span>
+            ))}
+          </div>
+          <p class="text-text-secondary text-sm leading-relaxed mb-4 flex-1">{project.description}</p>
+          <div>
+            <p class="text-xs font-semibold text-text-primary mb-2">Output by Dec 2026:</p>
+            <ul class="space-y-1">
+              {project.output.map((item) => (
+                <li class="text-xs text-text-secondary flex items-start gap-2">
+                  <span class="mt-1">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
